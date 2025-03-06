@@ -1,0 +1,12 @@
+{
+  "GREETING_GENERAL": {
+    "EN": "Hello",
+    "AR": "مرحبا",
+    "FR": "Bonjour"
+  },
+  "WELCOME_MESSAGE": {
+    "EN": "Welcome to Pro-Academix",
+    "AR": "مرحبًا بك في Pro-Academix",
+    "FR": "Bienvenue à Pro-Academix"
+  }
+}
