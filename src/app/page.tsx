@@ -1,9 +1,9 @@
 "use client";
 
 import { useLanguage } from "@/context/languageContext";
-import { getTranslation } from "@/utilities/translation/translation";
+import { LanguageCode } from "@/types/types";
+import { useTranslation } from "@/utilities/translation/translation";
 
-type LanguageCode = "EN" | "AR" | "FR"; // Explicitly define valid languages
 
 export default function Home() {
   const { language, setLanguage } = useLanguage();
@@ -12,10 +12,12 @@ export default function Home() {
     return ["EN", "AR", "FR"].includes(lang);
   };
 
+   const { getTranslation } = useTranslation();
+
   return (
     <div>
-      <h1>{getTranslation("GREETING_GENERAL", validLanguage(language) ? language : "EN")}</h1>
-      <p>{getTranslation("WELCOME_MESSAGE", validLanguage(language) ? language : "EN")}</p>
+      <h1>{getTranslation("GREETING_GENERAL")}</h1>
+
 
       <select value={language} onChange={(e) => setLanguage(e.target.value)}>
         <option value="EN">English</option>
