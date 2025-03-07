@@ -1,4 +1,6 @@
 import { LanguageProvider } from "@/context/languageContext";
+import { ThemeProvider } from "@/context/ThemeProvider";
+import "./globals.css"
 
 export default function RootLayout({
   children,
@@ -8,7 +10,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <ThemeProvider>
         <LanguageProvider>{children}</LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
